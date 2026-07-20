@@ -9,6 +9,16 @@ Convertir documents A4/PDF (fets al Claude Design) en **pàgines web responsive*
 3. **Horaris** — pendent.
 4. **Pàgina central (hub)** — pendent: portada amb enllaços als 3 documents.
 
+**Estructura decidida: TOT EN UN MATEIX SITE** (una sola desplegament a Vercel), amb rutes netes:
+- `/` → hub (portada amb 3 targetes)
+- `/millores/` → Les millores (aquest document)
+- `/quotes/` → Nova estructura de quotes
+- `/horaris/` → Horaris
+
+Implementació estàtica a Vercel: carpetes amb `index.html` a cadascuna →
+`index.html` (hub), `millores/index.html`, `quotes/index.html`, `horaris/index.html`.
+⚠️ Ara mateix `index.html` = document Millores; en muntar el hub, moure Millores a `millores/index.html` i posar el hub a `index.html`.
+
 Tots han de compartir **el mateix sistema visual** (el d'aquest document). En crear-ne un de nou, copia els tokens i els components d'aquí.
 
 ## Fitxers
