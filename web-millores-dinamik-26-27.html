@@ -421,6 +421,34 @@
   .fbcomm .ck2 .cd{width:9px;height:9px;border-radius:50%;flex:none;}
   .fbcomm p{margin:5px 0 0;font-size:13px;line-height:1.55;color:#333;}
 
+  /* ---------- "One more thing" · nova equipació ---------- */
+  .omt{background:var(--black);color:#fff;border-radius:22px;padding:clamp(26px,5.5vw,48px);margin:38px 0;position:relative;overflow:hidden;}
+  .omt-glow{position:absolute;top:-45%;right:-18%;width:65%;height:130%;background:radial-gradient(circle,rgba(137,205,36,.30),transparent 62%);pointer-events:none;}
+  .omt-glow.b{top:auto;bottom:-55%;right:auto;left:-20%;width:55%;background:radial-gradient(circle,rgba(137,205,36,.14),transparent 60%);}
+  .omt-in{position:relative;z-index:1;}
+  .omt-k{font-family:var(--f-meta);letter-spacing:.28em;text-transform:uppercase;font-size:12px;color:var(--green);margin:0 0 10px;}
+  .omt-h{font-family:var(--f-display);font-style:italic;font-weight:900;text-transform:uppercase;color:#fff;font-size:clamp(30px,7vw,48px);line-height:.94;letter-spacing:-.01em;margin:0;}
+  .omt-lead{color:#d6d6d1;font-size:clamp(15px,4vw,17px);line-height:1.6;margin:15px 0 24px;max-width:62ch;}
+  .omt-lead strong{color:#fff;font-weight:700;}
+  .omt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .kit-card{background:#141414;border:1px solid #2b2b2b;border-radius:14px;overflow:hidden;margin:0;}
+  .kit-card .imgwrap{aspect-ratio:4/3;background:linear-gradient(155deg,#89CD24,#1a1a1a 72%);position:relative;}
+  .kit-card .imgwrap img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;display:block;}
+  .kit-card figcaption{padding:12px 14px;display:flex;flex-direction:column;gap:2px;}
+  .kit-card .s{font-family:var(--f-meta);text-transform:uppercase;letter-spacing:.12em;font-size:9.5px;color:var(--green);font-weight:600;}
+  .kit-card .t{font-family:var(--f-display);font-style:italic;font-weight:900;text-transform:uppercase;font-size:17px;color:#fff;line-height:1;}
+  .omt-foot{color:#bdbdb7;font-size:13.5px;line-height:1.55;margin:22px 0 0;}
+  .omt-foot strong{color:var(--green);font-weight:700;}
+  .omt-badge{display:inline-block;margin-top:14px;font-family:var(--f-meta);text-transform:uppercase;letter-spacing:.1em;font-size:10px;font-weight:600;color:var(--black);background:var(--green);padding:7px 14px;border-radius:20px;}
+  .omt-hint{font-family:var(--f-meta);text-transform:uppercase;letter-spacing:.12em;font-size:9.5px;color:var(--green);margin:14px 0 0;display:flex;align-items:center;gap:7px;}
+  .kit-card .imgwrap{cursor:zoom-in;}
+  .kit-card .imgwrap img{transition:transform .35s ease;}
+  .kit-card:hover .imgwrap img{transform:scale(1.05);}
+  .lb{position:fixed;inset:0;background:rgba(8,8,8,.93);display:none;align-items:center;justify-content:center;z-index:60;padding:20px;cursor:zoom-out;}
+  .lb.open{display:flex;}
+  .lb img{max-width:min(1100px,96vw);max-height:92vh;width:auto;height:auto;border-radius:12px;box-shadow:0 24px 70px rgba(0,0,0,.6);}
+  .lb .lbx{position:absolute;top:12px;right:22px;color:#fff;font-size:32px;line-height:1;font-weight:300;cursor:pointer;}
+
   /* ---------- Index (TOC) + floating section nav ---------- */
   h2{scroll-margin-top:68px;}
   .toc{border:1px solid var(--line);border-radius:16px;background:#fff;padding:20px 22px 22px;margin:26px 0;}
@@ -469,6 +497,7 @@
     .awk .twocol,.dash,.fbgrid{grid-template-columns:1fr;}
     .fbq .q{min-height:0;}
     .toc-list{grid-template-columns:1fr;}
+    .omt-grid{grid-template-columns:1fr;}
     .awk .cvrow{flex-wrap:wrap;}
     .awk .cvrow .rt{width:100%;text-align:left;margin-left:56px;}
     .tl>li{padding-left:46px;margin-left:14px;}
@@ -516,7 +545,7 @@
     <p>No són bones intencions: són millores que fa mesos que construïm.</p>
   </div>
 
-    <nav class="toc" aria-label="Contingut del document">
+      <nav class="toc" aria-label="Contingut del document">
     <div class="toc-h">Contingut</div>
     <p class="toc-hint">Toca una secció per anar-hi directament.</p>
     <ol class="toc-list">
@@ -526,7 +555,8 @@
       <li><a href="#s04"><span class="tn">04</span><span class="tt">Us acompanyem tot el curs</span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
       <li><a href="#s05"><span class="tn">05</span><span class="tt">Athria: el club en un lloc</span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
       <li><a href="#s06"><span class="tn">06</span><span class="tt">Com ho notareu</span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
-      <li><a href="#s07"><span class="tn">07</span><span class="tt">Cura integral de l'atleta</span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li><a href="#s07"><span class="tn">07</span><span class="tt">Nova imatge i equipació</span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li><a href="#s08"><span class="tn">08</span><span class="tt">Cura integral de l'atleta</span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
     </ol>
   </nav>
 
@@ -939,7 +969,7 @@
   </div>
   <p class="meta" style="margin-top:12px;">El model complet de comunicació, els seus canals i els contactes de referència s'explicaran al kit de benvinguda. La informació de cada atleta serà privada i accessible únicament per a la seva família i els professionals autoritzats del club, d'acord amb la normativa de protecció de dades.</p>
 
-  <!-- ============ 06 · COM HO NOTAREU ============ -->
+    <!-- ============ 06 · COM HO NOTAREU ============ -->
   <h2 id="s06"><span class="n">06</span>Com ho notareu en el dia a dia</h2>
   <p>Aquestes millores estan pensades per <strong>ampliar les oportunitats de progressió</strong> de cada atleta, simplificar la relació amb el club i fer més visible el seu acompanyament esportiu.</p>
   <div class="bens">
@@ -973,8 +1003,29 @@
     <p>Menys dubtes. Més claredat. Més acompanyament.</p>
   </div>
 
-  <!-- ============ 07 · CURA INTEGRAL ============ -->
-  <h2 id="s07"><span class="n">07</span>I a més: tenim cura de l'atleta per complet</h2>
+  <!-- ============ 07 · NOVA IMATGE I EQUIPACIÓ ============ -->
+  <h2 id="s07"><span class="n">07</span>Nova imatge, nova equipació</h2>
+  <p>La identitat del club també es porta posada: aquesta temporada <strong>renovem la imatge de Dinami-K</strong>, a la pista i al carrer.</p>
+  <div class="omt">
+    <div class="omt-glow"></div>
+    <div class="omt-glow b"></div>
+    <div class="omt-in">
+      <p class="omt-k">Estrena · Temporada 2026/27</p>
+      <h3 class="omt-h">Energia, moviment i pertinença</h3>
+      <p class="omt-lead">Estrenem una <strong>nova equipació</strong> —i tota una <strong>col·lecció de marxandatge</strong>— amb l'ADN Dinami-K: energia, moviment i sentit de pertinença. Perquè sentir-se part de l'equip també forma part del rendiment.</p>
+      <div class="omt-grid">
+        <figure class="kit-card"><div class="imgwrap"><img src="equip/samarreta.jpg" alt="Samarreta tècnica Dinami-K 2026/27"></div><figcaption><span class="s">Modalitat 01</span><span class="t">Samarreta tècnica</span></figcaption></figure>
+        <figure class="kit-card"><div class="imgwrap"><img src="equip/competicio.jpg" alt="Equip de competició Dinami-K 2026/27"></div><figcaption><span class="s">Modalitat 02</span><span class="t">Equip de competició</span></figcaption></figure>
+        <figure class="kit-card"><div class="imgwrap"><img src="equip/tirants.jpg" alt="Samarreta de tirants Dinami-K 2026/27"></div><figcaption><span class="s">Modalitat 03</span><span class="t">Samarreta de tirants</span></figcaption></figure>
+      </div>
+      <p class="omt-hint">⤢ Toca una imatge per veure-la en gran</p>
+      <p class="omt-foot">Les tres modalitats més demanades, amb el disseny dinàmic del club. <strong>La col·lecció completa, molt aviat.</strong></p>
+      <span class="omt-badge">Nova temporada 2026/27</span>
+    </div>
+  </div>
+
+  <!-- ============ 08 · CURA INTEGRAL ============ -->
+  <h2 id="s08"><span class="n">08</span>I a més: tenim cura de l'atleta per complet</h2>
   <p>El desenvolupament esportiu no depèn únicament de l'entrenament. Aquesta temporada ampliem la mirada per acompanyar també la <strong>salut, els hàbits i el benestar</strong> de l'atleta i del <strong>seu entorn familiar</strong>, perquè tenir cura de la família que envolta l'atleta forma part de tenir cura d'ell.</p>
   <div class="fronts">
     <div class="front">
@@ -1020,8 +1071,11 @@
   <a href="#s04"><span class="tn">04</span>Us acompanyem tot el curs</a>
   <a href="#s05"><span class="tn">05</span>Athria: el club en un lloc</a>
   <a href="#s06"><span class="tn">06</span>Com ho notareu</a>
-  <a href="#s07"><span class="tn">07</span>Cura integral de l'atleta</a>
+  <a href="#s07"><span class="tn">07</span>Nova imatge i equipació</a>
+  <a href="#s08"><span class="tn">08</span>Cura integral de l'atleta</a>
 </nav>
 <script>document.querySelectorAll(".navpanel a").forEach(function(a){a.addEventListener("click",function(){document.getElementById("navtoggle").checked=false;});});</script>
+<div class="lb" id="lightbox"><span class="lbx" aria-hidden="true">&times;</span><img id="lightbox-img" src="" alt="Equipació Dinami-K 2026/27 ampliada"></div>
+<script>(function(){var lb=document.getElementById("lightbox"),im=document.getElementById("lightbox-img");document.querySelectorAll(".kit-card img").forEach(function(g){g.addEventListener("click",function(){im.src=g.currentSrc||g.src;lb.classList.add("open");});});if(lb){lb.addEventListener("click",function(){lb.classList.remove("open");});}document.addEventListener("keydown",function(e){if(e.key==="Escape"&&lb)lb.classList.remove("open");});})();</script>
 </body>
 </html>
