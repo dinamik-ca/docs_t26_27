@@ -443,6 +443,10 @@
   .toc-list .arw{margin-left:auto;flex:none;color:var(--grey-2);transition:transform .14s,color .14s;}
   .toc-list a:hover .arw{color:var(--green-d);transform:translateX(3px);}
   .toc-list .arw svg{width:16px;height:16px;stroke:currentColor;stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round;display:block;}
+  .toc-list a.hot{background:var(--green-bg);border-color:var(--green);}
+  .toc-list a.hot .tn{background:var(--green);color:var(--black);}
+  .toc-list a.hot .tt{color:var(--green-ink);}
+  .toc-list a.hot .arw{color:var(--green-d);}
 
   .navtoggle{position:fixed;width:1px;height:1px;opacity:0;pointer-events:none;}
   .navfab{position:fixed;right:20px;bottom:20px;width:52px;height:52px;border-radius:50%;background:var(--black);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px -8px rgba(10,10,10,.55);cursor:pointer;z-index:50;transition:background .15s,transform .15s;}
@@ -722,7 +726,7 @@
       <li><a href="#s02"><span class="tn">02</span><span class="tt">Tres programes i les quotes</span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
       <li><a href="#s03"><span class="tn">03</span><span class="tt">Dubtes habituals, resolts</span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
       <li><a href="#s04"><span class="tn">04</span><span class="tt">Cada camí compta</span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
-      <li><a href="#s05"><span class="tn">05</span><span class="tt">Reserva anticipada</span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li><a class="hot" href="#s05"><span class="tn">05</span><span class="tt">Reserva anticipada fins 9 agost</span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
       <li><a href="#s06"><span class="tn">06</span><span class="tt">Com confirmar la plaça</span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
     </ol>
   </nav>
@@ -968,7 +972,7 @@
   <a href="#s02"><span class="tn">02</span>Tres programes i les quotes</a>
   <a href="#s03"><span class="tn">03</span>Dubtes habituals, resolts</a>
   <a href="#s04"><span class="tn">04</span>Cada camí compta</a>
-  <a href="#s05"><span class="tn">05</span>Reserva anticipada</a>
+  <a href="#s05"><span class="tn">05</span>Reserva anticipada fins 9 agost</a>
   <a href="#s06"><span class="tn">06</span>Com confirmar la plaça</a>
 </nav>
 <script>document.querySelectorAll(".navpanel a").forEach(function(a){a.addEventListener("click",function(){document.getElementById("navtoggle").checked=false;});});</script>
