@@ -80,7 +80,14 @@ Es reconstrueixen en HTML/CSS (les captures reals pesen massa). Dos formats:
 5. Genera la versió autònoma i publica com els altres.
 6. Per al **hub**: portada simple amb 3 targetes (estil `.toc`/`.card`) enllaçant els 3 documents desplegats.
 
+## Estat del site (fet)
+Site únic desplegable ja muntat i pujat a GitHub (`dinamik-ca/docs_t26_27`, branca `main`):
+- `index.html` = hub (des de `web-hub-dinamik-26-27.html`, enllaços relatius `millores/` `quotes/` `horaris/`).
+- `millores/index.html`, `quotes/index.html`, `horaris/index.html` = versions autònomes.
+- Falta: connectar el repo a Vercel perquè desplegui i cada `push` actualitzi.
+
 ## Restriccions apreses
+- ⚠️ **Charset**: els fitxers autònoms en format Artifact (comencen amb `<title>`) NO porten `<meta charset>` ni `<!DOCTYPE>`; l'embolcall de l'Artifact els afegeix, però **servits directes (Vercel/http.server) donen mojibake** amb accents/·. Per a desplegament cal anteposar `<!DOCTYPE html>` + `<meta charset="UTF-8">` + viewport a cada `index.html`.
 - `DesignSync get_file` talla a 256 KiB (captures a alta resolució arriben incompletes; però la sortida es persisteix a disc i es pot processar amb python).
 - Artifacts: CSP bloqueja fonts/imatges externes → cal incrustar-ho tot (per això la versió autònoma).
 - Quan es fan servir pronoms per a algú, usar they/them si no se sap.
